@@ -2,6 +2,11 @@
 
 AgentCoach 是一个基于长期记忆、Memory MCP、个人知识库 RAG 和多智能体协作的个人 AI Agent 学习监督与复盘系统。它围绕每日目标、Web 悬浮提醒、手动打卡、知识检测、Rubric 评分、长期 Memory、掌握度、复盘、Redis、Learning Harness 和可审计 Trace 构建完整学习闭环。
 
+## 系统架构
+
+![AgentCoach 系统架构图](./AgentCoach.png)
+
+
 ## 项目边界：不是 Code Agent
 
 AgentCoach **不是 Code Agent**：
