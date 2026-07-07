@@ -467,19 +467,6 @@ Invoke-RestMethod `
 - Agent、Prompt、Service、API、Schema 分层清晰。
 - 本地 Chroma + 多语言 Embedding 的个人知识库，问答强制显示来源。
 
-## 简历写法
-
-### AgentCoach：基于长期记忆和 Memory MCP 的个人 Agent 学习监督系统
-
-- 设计并实现面向 AI Agent 学习场景的个人学习监督系统，支持每日目标生成、Web 悬浮提醒、学习打卡、知识检测、答案评估和定期复盘。
-- 构建多 Agent 协作流程，包含 Goal Planner、Quiz Agent、Evaluator Agent、Memory Curator 和 Reflection Agent，实现学习任务规划、提问验证、掌握度评估与复习推荐。
-- 设计长期 Memory 管理模块，记录用户学习进度、Agent 知识薄弱点、LeetCode 错因、学习收获和下次复习时间，支持个性化学习路径更新。
-- 基于 Rubric 的 LLM-as-Judge 机制评估用户回答，从概念准确性、关键点覆盖、工程理解和表达清晰度等维度判断知识掌握情况。
-- 引入 Redis 作为今日状态缓存、Quiz 会话缓存、提醒状态缓存、LLM 响应缓存和请求限流模块，提升系统响应速度和稳定性。
-- 实现 Learning Harness，记录每次学习任务、Quiz 生成、用户回答、评分反馈、Memory 更新和复盘结果，为 Trace 可视化和学习效果分析提供数据基础。
-- 实现小型 Memory MCP Server，将 memory.search、memory.write、memory.update、memory.list_due_reviews 等能力封装为标准化工具接口，降低 Agent 与数据库之间的耦合。
-- 构建个人 Agent 知识库 RAG 模块，支持 Markdown 笔记上传、文本切块、Embedding 向量化、Chroma 检索和基于来源引用的知识问答。
-- 将 RAG 检索结果与 Quiz Agent 联动，支持基于用户个人笔记自动生成检测题，并将答题薄弱点写入长期 Memory。
 
 ## 后续规划
 
@@ -490,3 +477,10 @@ Invoke-RestMethod `
 3. 增加文档版本、来源 URL 和引用定位。
 4. 建立 retrieval hit rate、groundedness 和引用准确率评估。
 5. 支持 PDF/HTML Loader，但仍保持明确的上传权限边界。
+   
+
+### 建立桌面悬浮窗口
+将 Web 悬浮框升级为真正的桌面悬浮学习窗口。用户打开桌面端后，可以在屏幕边缘看到一个轻量悬浮窗，显示今日学习任务、完成进度、待检测 Quiz、复盘提醒，并支持快速打卡。
+
+### 云端部署
+通过 Docker、Azure Container Registry 和 Azure Container Apps 完成云端部署
