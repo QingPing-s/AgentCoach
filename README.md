@@ -1,5 +1,10 @@
 # AgentCoach
 
+## 在线演示
+
+- Azure 部署地址：[https://agreeable-forest-0e1921400.7.azurestaticapps.net/](https://agreeable-forest-0e1921400.7.azurestaticapps.net/)
+- 后端健康检查：[https://agentcoach-api.gentlefield-019d4ae8.eastasia.azurecontainerapps.io/api/health](https://agentcoach-api.gentlefield-019d4ae8.eastasia.azurecontainerapps.io/api/health)
+
 AgentCoach 是一个基于长期记忆、Memory MCP、个人知识库 RAG 和多智能体协作的个人 AI Agent 学习监督与复盘系统。它围绕每日目标、Web 悬浮提醒、手动打卡、知识检测、Rubric 评分、长期 Memory、掌握度、复盘、Redis、Learning Harness 和可审计 Trace 构建完整学习闭环。
 
 ## UI界面
